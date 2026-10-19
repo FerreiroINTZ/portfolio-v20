@@ -21,7 +21,10 @@ function loading() {
           <img id={styles.loadingIcon} src="/icons/loading/icon.png" alt="icone de loading"/>
           <p id={styles.mainText}>Preparando sua experiencia</p>
           <p id={styles.subText}>Reunindo os elementos...</p>
-          <div id={styles.loadingContainer}></div>
+          <div id={styles.loadingContainer}>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </div>

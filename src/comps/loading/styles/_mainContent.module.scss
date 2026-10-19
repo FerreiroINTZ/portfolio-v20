@@ -37,15 +37,34 @@
         #loadingContainer{
             margin-top: 15px;
             width: 45%;
-            height: 3px;
-            background: linear-gradient(
-                90deg, 
-                #E8C783, 
-                #837458, 
-                #E8C783
-            );
+            height: 5px;
+            display: flex;
+            // gap: 10px;
+            overflow: hidden;
+            // background: blue;
+            
+            span{
+                flex: 0 0 auto;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                        90deg,
+                        #fcdd9e 5%, 
+                        #c7ac76, 
+                        #5e5340,
+                        #fcdd9e
+                );
+                animation: moveLoadingBlocks 4s infinite ease-in-out;
+            }
             border-radius: 100px;
         }
+    }
+
+    @keyframes moveLoadingBlocks {
+        to{
+            transform: translateX(-100%);
+        }
+        
     }
 
     @keyframes rotateLogo {
