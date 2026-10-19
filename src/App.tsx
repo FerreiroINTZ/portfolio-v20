@@ -2,6 +2,7 @@ import {useEffect} from "react"
 import SmoothScroll from "@funcs/lenis/lenis"
 import Loading from "@comps/loading/loading"
 import loading, {print_load} from "@funcs/loading/loading"
+import Hero from "@comps/hero/hero"
 
 function App() {
   useEffect(() =>{
@@ -14,6 +15,7 @@ function App() {
     <>
       <SmoothScroll />
       <Loading />
+      <Hero />
       <div>App</div>
     </>
   )

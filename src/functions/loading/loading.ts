@@ -8,8 +8,8 @@ function inc_load(){
 }
 
 export function print_load(){
-  console.log("Qtd:", qtd)
-  console.log("Loaded:", loaded_qtd)
+  // console.log("Qtd:", qtd)
+  // console.log("Loaded:", loaded_qtd)
 }
 
 function hook() {

@@ -23,7 +23,8 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "@comps/*": ["./src/comps/*"],
-      "@funcs/*": ["./src/functions/*"]
+      "@funcs/*": ["./src/functions/*"],
+      "@cntx": ["./src/cntx.tsx"]
     }
   },
   "include": ["src"]

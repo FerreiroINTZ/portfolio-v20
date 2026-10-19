@@ -1,11 +1,33 @@
 import {useEffect} from 'react'
 import {lenis} from "@funcs/lenis/lenis"
 import styles from "./styles/main.module.scss"
+import {Cntx} from "@cntx"
+import {useContext, useRef} from "react"
 
 function loading() {
+  const {isAllLoaded} = useContext<any>(Cntx)
+  const timeout = useRef<null | number>(null)
     useEffect(() =>{
         lenis?.stop()
     }, [])
+
+    function limparTempo(){
+      if(timeout.current){
+          clearTimeout(timeout.current)
+        }
+    }
+
+    useEffect(() =>{
+      if(isAllLoaded){
+        timeout.current = setTimeout(() =>{
+          console.log("Animacao de saida!")
+        }, 3000)
+      }else{
+        limparTempo()
+      }
+
+      return () => limparTempo()
+    }, [isAllLoaded])
 
   return (
     <div id={styles.loadContainer}>
