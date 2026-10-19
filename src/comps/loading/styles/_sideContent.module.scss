@@ -1,0 +1,34 @@
+@mixin sideLabelStyle{
+    #sideContentContainer{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: grid;
+        padding: 20px 30px;
+        font-size: 26px;
+        font-weight: 500;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+        user-select: none;
+
+        p{
+            color: #CFA45C;
+        }
+
+        #loadingLabel{
+            justify-self: end;
+        }
+
+        #textLabel{
+            align-self: end;
+            text-transform: uppercase;
+        }
+
+        #yearLabel{
+            justify-self: end;
+            align-self: end;
+        }
+    }
+}

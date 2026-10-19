@@ -1,0 +1,62 @@
+@mixin mainContent{
+    #mainContentWrapper{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 150px;
+        // background: red;
+    }
+
+    #mainContentContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // background: red;
+
+        #loadingIcon{
+            // background: red;
+            animation: rotateLogo 1.6s infinite ease-in-out;
+        }
+
+        #mainText{
+            margin-top: 20px;
+            font-size: 40px;
+            color: #F1E2CF;
+            font-weight: 500;
+        }
+
+        #subText{
+            margin-top: 15px;
+            color: #E8C783;
+            font-size: 26px;
+            font-style: italic;
+        }
+
+        #loadingContainer{
+            margin-top: 15px;
+            width: 45%;
+            height: 3px;
+            background: linear-gradient(
+                90deg, 
+                #E8C783, 
+                #837458, 
+                #E8C783
+            );
+            border-radius: 100px;
+        }
+    }
+
+    @keyframes rotateLogo {
+        0%{
+            transform: rotate(0deg);
+        }
+        15%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+}

@@ -1,10 +1,20 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
 body{
-  // background: #303030;
   background: linear-gradient(45deg, red, blue, pink, green);
   color: white;
-  height: 300vh;
+  font-family: "Frank Ruhl Libre", serif;
 
   &::-webkit-scrollbar{
     display: none;
+  }
+
+  #root{
+    min-width: 100vw;
+    min-height: 100vh;
   }
 }
