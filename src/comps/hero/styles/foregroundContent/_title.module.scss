@@ -1,0 +1,29 @@
+@use "variables" as *;
+
+#nameContainer{
+            font-size: 46px;
+            font-style: italic;
+            color: $light_gold;
+        }
+
+        h1{
+            font-size: 120px;
+            text-transform: uppercase;
+            background: linear-gradient(
+                90deg,
+                #eed5b4,
+                $gold
+            );
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            width: fit-content;
+            color: $gold;
+        }
+
+        #subTitleContainer{
+            font-size: 30px;
+            text-transform: uppercase;
+            color: $paper;
+            font-weight: 900;
+            letter-spacing: 5px;
+        }

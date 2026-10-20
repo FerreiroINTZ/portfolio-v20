@@ -1,47 +1,6 @@
 @use "variables" as *;
-// @mixin frontContentContainer{
-    #frontContentContainer{
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        padding: 160px 60px 100px 80px;
-        height: 100%;
-        // background: red;
-        width: 100%;
-        line-height: 85px;
-        font-family: $main_font;
 
-        #nameContainer{
-            font-size: 46px;
-            font-style: italic;
-            color: $light_gold;
-        }
-
-        h1{
-            font-size: 120px;
-            text-transform: uppercase;
-            background: linear-gradient(
-                90deg,
-                #eed5b4,
-                $gold
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            width: fit-content;
-            color: $gold;
-        }
-
-        #subTitleContainer{
-            font-size: 30px;
-            text-transform: uppercase;
-            color: $paper;
-            font-weight: 900;
-            letter-spacing: 5px;
-        }
-
-        #socialContainer{
+#socialContainer{
             margin-top: 60px;
             display: flex;
             gap: 24px;
@@ -106,5 +65,3 @@
                 }
             }
         }
-    }
-// }

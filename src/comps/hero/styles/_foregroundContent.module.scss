@@ -1,0 +1,17 @@
+@use "variables" as *;
+@use "./foregroundContent/title.module" as *;
+@use "./foregroundContent/social.module" as *;
+
+#frontContentContainer{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 160px 60px 100px 80px;
+        height: 100%;
+        // background: red;
+        width: 100%;
+        line-height: 85px;
+        font-family: $main_font;
+    }
