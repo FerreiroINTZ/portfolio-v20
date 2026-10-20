@@ -1,0 +1,24 @@
+@use "variables" as *;
+
+#titleSeparator{
+        margin-top: 10px;
+        position: relative;
+        width: 300px;
+
+        span{
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: $gold;
+        }
+
+        img{
+            position: absolute;
+            transform: translateY(-50%);
+            right: 50%;
+            // background: red;
+            $size: 20px;
+            width: $size;
+            height: $size;
+        }
+    }

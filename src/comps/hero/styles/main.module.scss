@@ -1,4 +1,5 @@
-@use "title.module.scss" as *;
+@use "_title.module.scss" as *;
+@use "_titleSeparator.module.scss" as *;
 @use "variables" as *;
 
 #heroSection{
@@ -13,29 +14,6 @@
         background-size: cover;
         background-position: 0px -70px;
         height: 100vh;
-    }
-
-    #titleSeparator{
-        margin-top: 10px;
-        position: relative;
-        width: 300px;
-
-        span{
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background: $gold;
-        }
-
-        img{
-            position: absolute;
-            transform: translateY(-50%);
-            right: 50%;
-            // background: red;
-            $size: 20px;
-            width: $size;
-            height: $size;
-        }
     }
 
     #mainText{
