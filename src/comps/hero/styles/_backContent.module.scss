@@ -1,0 +1,135 @@
+@use "variables" as *;
+
+@mixin backContentContainer{
+    #backContentContainer{
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 30px;
+        width: 100%;
+        height: 100%;
+        // background-color: blue;
+
+    #topLeftLine{
+        display: flex;
+        span{
+            // position: absolute;
+            width: 160px;
+            height: 2px;
+            background: $gold;
+        }
+
+        img{
+            // position: absolute;
+            $size: 20px;
+            width: $size;
+            height: $size;
+            transform: translateY(-50%);
+        }
+    }
+
+    #bottomRightLine{
+        display: flex;
+        align-self: end;
+        justify-self: end;
+        // background: red;
+        span{
+            // position: absolute;
+            width: 160px;
+            height: 2px;
+            background: $gold;
+        }
+
+        img{
+            // position: absolute;
+            $size: 20px;
+            width: $size;
+            height: $size;
+            transform: translateY(-50%);
+        }
+    }
+
+    #topRightLine{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas: 
+        'topLine topLine'
+        'text rightLine';
+        justify-items: end;
+        gap: 5px;
+        justify-self: end;
+        // background: pink;
+        height: fit-content;
+        width: fit-content;
+
+        #topRightLine_1{
+            grid-area: topLine;
+            background: $gold;
+            width: 220px;
+            height: 1px;
+        }
+
+        #topRightLine_2{
+            width: 2px;
+            height: 80px;
+            grid-area: rightLine;
+            background: linear-gradient(
+                #00000000, 
+                $gold
+            );
+        }
+
+        p{
+            grid-area: text;
+            width: fit-content;
+            // background: cyan;
+            margin-top: 10px;
+            margin-right: 10px;
+            color: $gold;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-family: $main_font;
+            letter-spacing: 1px;
+        }
+    }
+
+    #bottomLeftLine{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 
+        'leftLine text'
+        'leftLine bottomLine';
+        gap: 10px;
+        align-self: end;
+
+        span{
+            display: block;
+        }
+
+        #bottomLeftLine_1{
+            grid-area: leftLine;
+            width: 1px;
+            height: 75px;
+            background: $gold;
+        }
+
+        #bottomLeftLine_2{
+            grid-area: bottomLine;
+            width: 170px;
+            height: 1px;
+            background: linear-gradient(
+                90deg, #00000000, $gold
+            );
+        }
+
+        img{
+            $size: 16px;
+            width: $size;
+            height: $size;
+            align-self: end;
+        }
+    }
+}
+} 
