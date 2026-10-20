@@ -6,7 +6,7 @@
         position: absolute;
         top: 0px;
         left: 0px;
-        padding: 100px 80px;
+        padding: 160px 60px 100px 80px;
         height: 100%;
         // background: red;
         width: 100%;
@@ -44,14 +44,14 @@
         #socialContainer{
             margin-top: 60px;
             display: flex;
-            gap: 20px;
+            gap: 24px;
             flex-direction: column;
             // background: red;
 
             #socialCardsWrapper{
                 display: flex;
                 flex-direction: column;
-                gap: 14px;
+                gap: 12px;
                 // background: blue;
 
                 .socialCard{
@@ -71,7 +71,7 @@
                     }
 
                     img{
-                        $size: 45%;
+                        $size: 40%;
                         width: $size;
                         height: $size;
                     }
