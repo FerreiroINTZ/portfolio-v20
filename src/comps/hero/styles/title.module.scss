@@ -1,0 +1,34 @@
+@use "variables" as *;
+// @mixin frontContentContainer{
+    #frontContentContainer{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 100px 80px;
+        height: 100%;
+        // background: red;
+        width: 100%;
+        line-height: 85px;
+        font-family: $main_font;
+
+        #nameContainer{
+            font-size: 46px;
+            font-style: italic;
+            color: $gold;
+        }
+
+        h1{
+            font-size: 130px;
+            text-transform: uppercase;
+            color: $gold;
+        }
+
+        #subTitleContainer{
+            font-size: 30px;
+            text-transform: uppercase;
+            color: $light_gold;
+            font-weight: 900;
+            letter-spacing: 5px;
+        }
+    }
+// }

@@ -1,0 +1,51 @@
+@use "title.module.scss" as *;
+@use "variables" as *;
+
+#heroSection{
+    position: relative;
+    background: $gold;
+    width: 100%;
+    height: 200vh;
+
+    #heroContainer{
+        background-image: url("/public/icons/hero/bg.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0px -70px;
+        height: 100vh;
+    }
+
+    #titleSeparator{
+        position: relative;
+        // background: blue;
+        width: 300px;
+
+        span{
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: $gold;
+        }
+
+        img{
+            position: absolute;
+            transform: translateY(-50%);
+            right: 50%;
+            // background: red;
+            $size: 20px;
+            width: $size;
+            height: $size;
+        }
+    }
+
+    #mainText{
+        margin-top: 30px;
+        font-size: 34px;
+        line-height: 36px;
+        color: $paper;
+        // word-break: break-all;
+        // white-space: pre;
+        // background: red;
+    }
+    
+}

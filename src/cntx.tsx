@@ -28,7 +28,7 @@ export default function Context({children}: {children: any}){
         }else{
             setIsAllLoaded(() => false)
         }
-        console.log("Completo?", isAllLoaded)
+        // console.log("Completo?", isAllLoaded)
     }, [loadedItems, loadingItems])
 
     // useEffect(() =>{

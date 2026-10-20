@@ -24,7 +24,8 @@
     "paths": {
       "@comps/*": ["./src/comps/*"],
       "@funcs/*": ["./src/functions/*"],
-      "@cntx": ["./src/cntx.tsx"]
+      "@cntx": ["./src/cntx.tsx"],
+      "@style_vars": ["./src/_variables.scss"]
     }
   },
   "include": ["src"]

@@ -1,3 +1,5 @@
+**Desconsiderar essa documentacao, por enquanto!**
+
 # Intro
 Como o site possivelmente vai ser pesado, preciso de uma tela de loading. Isso tambem corrobora pra imersividade da pagina.
 
