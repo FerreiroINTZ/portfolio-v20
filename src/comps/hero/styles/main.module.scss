@@ -3,7 +3,7 @@
 
 #heroSection{
     position: relative;
-    background: $gold;
+    background: red;
     width: 100%;
     height: 200vh;
 
@@ -16,8 +16,8 @@
     }
 
     #titleSeparator{
+        margin-top: 10px;
         position: relative;
-        // background: blue;
         width: 300px;
 
         span{
@@ -39,13 +39,11 @@
     }
 
     #mainText{
-        margin-top: 30px;
-        font-size: 34px;
-        line-height: 36px;
+        margin-top: 36px;
+        font-size: 30px;
+        line-height: 40px;
+        font-style: italic;
         color: $paper;
-        // word-break: break-all;
-        // white-space: pre;
-        // background: red;
     }
     
 }

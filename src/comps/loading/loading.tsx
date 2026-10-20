@@ -55,9 +55,11 @@ function loading() {
     }, [isAllLoaded])
 
     useEffect(() =>{
+      if(exit){
+        lenis?.start()
+      }
       console.log("Saindo!!")
       console.log(exit)
-      lenis?.start()
     }, [exit])
 
   return (
