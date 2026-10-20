@@ -1,6 +1,8 @@
 @use "variables" as *;
 // @mixin frontContentContainer{
     #frontContentContainer{
+        display: flex;
+        justify-content: space-between;
         position: absolute;
         top: 0px;
         left: 0px;
@@ -37,6 +39,72 @@
             color: $paper;
             font-weight: 900;
             letter-spacing: 5px;
+        }
+
+        #socialContainer{
+            margin-top: 60px;
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            // background: red;
+
+            #socialCardsWrapper{
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                // background: blue;
+
+                .socialCard{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    $size: 80px;
+                    width: $size;
+                    height: $size;
+                    background-image: url("/public/icons/social/bg.png");
+                    background-size: contain;
+                    cursor: pointer;
+                    transition: .3s;
+
+                    &:hover{
+                        transform: scale(1.075);
+                    }
+
+                    img{
+                        $size: 45%;
+                        width: $size;
+                        height: $size;
+                    }
+                }
+            }
+
+            #socialLine_1 span{
+                background: linear-gradient(#00000000, $gold);
+            }
+
+            #socialLine_2 span{
+                background: linear-gradient($gold, #00000000);
+            }
+
+            .socialLines{
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+                align-items: center;
+
+                span{
+                    display: block;
+                    width: 2px;
+                    height: 100px;
+                    background: blue;
+                }
+
+                img{
+                    $size: 20px;
+                    width: $size;
+                    height: $size;
+                }
+            }
         }
     }
 // }

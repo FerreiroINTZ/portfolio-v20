@@ -3,6 +3,9 @@ import {Cntx, type ContextItems} from "@cntx"
 import {useContext} from "react"
 import styles from "./styles/main.module.scss"
 
+import BackgroundElements from "./backgroundElements"
+import ForegroundElements from "./foregroundElements"
+
 function hero() {
 
   // const {addItem, loaded} = useContext(Cntx)
@@ -19,48 +22,9 @@ function hero() {
   return (
     <section id={styles.heroSection}>
       <div id={styles.heroContainer}>
-        <div id={styles.backContentContainer}>
-          <div id={styles.topLeftLine}>
-            <img src="/icons/general/star.png" alt="star icon"/>
-            <span></span>
-          </div>
-
-          <div id={styles.topRightLine}>
-            <span id={styles.topRightLine_1}></span>
-            <span id={styles.topRightLine_2}></span>
-            <p>
-              DESENVOLVEDOR <br />
-              FULL STACK
-              </p>
-          </div>
-
-          <div id={styles.bottomLeftLine}>
-            <img src="/icons/general/star.png" alt="star icon"/>
-            <span id={styles.bottomLeftLine_1}></span>
-            <span id={styles.bottomLeftLine_2}></span>
-          </div>
-
-          <div id={styles.bottomRightLine}>
-            <span></span>
-            <img src="/icons/general/star.png" alt="star icon"/>
-          </div>
-        </div>
-
-        <div id={styles.frontContentContainer}>
-          <div id={styles.titleWrapper}>
-            <p id={styles.nameContainer}>Gabriel Felipe Ferreira de Oliveira</p>
-            <h1 id={styles.titleContainer}>Full Stack</h1>
-            <p id={styles.subTitleContainer}>codigo • arte • propostio</p>
-          </div>
-          <div id={styles.titleSeparator}>
-            <span></span>
-            <img src="/icons/general/star.png" alt="star icon"/>
-          </div>
-          <p id={styles.mainText}>
-            Cada funcao lapidade como escultura. <br />
-            Cada interface, uma obra.
-            </p>
-        </div>
+        <BackgroundElements />
+        <ForegroundElements />
+        
       </div>
     </section>
   )
