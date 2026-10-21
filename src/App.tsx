@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <SmoothScroll />
-      <Loading />
+      {/* <Loading /> */}
       <Hero />
       {/* <div>App</div> */}
     </>

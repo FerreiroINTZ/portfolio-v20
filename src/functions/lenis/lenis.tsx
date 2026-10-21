@@ -16,7 +16,7 @@ function lenis_func() {
         }
         requestAnimationFrame(tick_scroll)
         return () => lenis!.destroy()
-    }, [])
+    })
 
   return <></>
 }

@@ -63,6 +63,7 @@ function loading() {
     }, [exit])
 
   return (
+    <div id={styles.loadContainerWrapper}>
     <AnimatePresence>
       {!exit &&
     <div id={styles.loadContainer}>
@@ -87,6 +88,7 @@ function loading() {
     </div>
     }
     </AnimatePresence>
+    </div>
   )
 }
 
