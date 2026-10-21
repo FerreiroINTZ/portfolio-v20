@@ -2,6 +2,7 @@ import styles from "./styles/main.module.scss"
 
 import MainContent from "./mainContent/mainContent"
 import HowIThink from "./mainContent/howIThink"
+import ThirdPart from "./mainContent/thirdPart"
 
 function about() {
   return (
@@ -13,6 +14,7 @@ function about() {
         <div id={styles.sectionLabel}><img src="/public/icons/general/star.png" alt="star icon"/><p>sobre mim</p></div>
         <MainContent />
         <HowIThink />
+        <ThirdPart />
       </div>
     </section>
   )

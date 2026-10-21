@@ -1,0 +1,28 @@
+@use "variables" as *;
+
+#itensList{
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 40px;
+            list-style: none;
+
+            li{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                img{
+                    $size: 22px;
+                    width: $size;
+                    height: $size;
+                }
+
+                p{
+                    font-size: 26px;
+                    color: $paper;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+            }
+        }

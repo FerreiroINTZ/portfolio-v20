@@ -1,6 +1,6 @@
 import styles from "../styles/main.module.scss"
 import CommomContainer from "./commomContainers"
-
+import ListItems from "./listItems"
 
 function howIThink() {
   return (
@@ -11,11 +11,7 @@ function howIThink() {
         
         <div id={styles.otherInfos}>
           <div id={styles.divider}></div>
-          <ul id={styles.itensList}>
-            {["arquitetura", "experiencia", "identidade visual"].map((item, indx) =>
-              <li key={indx}><img src="/public/icons/general/star.png" alt="star icon"/><p>{item}</p></li>
-            )}
-          </ul>
+          <ListItems items={["arquitetura", "experiencia", "identidade visual"]} />
         </div>
       </div>
     </div>

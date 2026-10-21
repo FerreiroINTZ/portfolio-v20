@@ -1,6 +1,8 @@
 @use "variables" as *;
 @use "./modules/mainContent.module" as *;
 @use "./modules/howIThinkContainer.module" as *;
+@use "./modules/thirdPartContainer.module" as *;
+@use "./modules/listItems.module" as  *;
 
 #aboutContainer{
     position: relative;
