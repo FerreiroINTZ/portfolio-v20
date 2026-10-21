@@ -1,6 +1,7 @@
 @use "variables" as *;
 @use "./foregroundContent/title.module" as *;
 @use "./foregroundContent/social.module" as *;
+@use "./foregroundContent/sections.module" as *;
 
 #frontContentContainer{
         display: flex;
@@ -12,6 +13,6 @@
         height: 100%;
         // background: red;
         width: 100%;
-        line-height: 85px;
+        // line-height: 85px;
         font-family: $main_font;
     }

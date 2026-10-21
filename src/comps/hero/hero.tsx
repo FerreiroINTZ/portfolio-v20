@@ -4,7 +4,7 @@ import {useContext} from "react"
 import styles from "./styles/main.module.scss"
 
 import BackgroundElements from "./backgroundElements"
-import ForegroundElements from "./foregroundElements"
+import ForegroundElements from "./foreground/foregroundElements"
 
 function hero() {
 

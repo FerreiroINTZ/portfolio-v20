@@ -1,0 +1,81 @@
+@use "variables" as *;
+
+#sectionsContainer{
+    display: flex;
+    margin-top: 100px;
+    // background: red;
+    width: fit-content;
+
+    #sectionsList{
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        list-style: none;
+        width: fit-content;
+        // background: blue;
+        gap: 20px;
+
+        li{
+            position: relative;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            // background: purple;
+            font-family: $sec_font;
+            font-size: 28px;
+            line-height: auto;
+            text-transform: capitalize;
+            font-weight: 500;
+            color: $paper;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover{
+                color: $gold;
+                transform: scale(1.05);
+
+                
+            }
+
+            &:hover .optionLine{
+                    width: 150px;
+            }
+
+            .optionLine{
+                // opacity: 0;
+                height: 3px;
+                width: 0px;
+                background: linear-gradient($gold, #00000000);
+                transition: .3s;
+            }
+
+            span{
+                font-weight: 600;
+                font-size: 22px;
+                color: $gold;
+                margin-right: 14px;
+            }
+        }
+    }
+
+    #starColumn{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        align-items: center;
+        width: fit-content;
+        
+        span{
+            display: block;
+            width: 2px;
+            height: 100%;
+            background: $gold;
+        }
+
+        img{
+            $size: 20px;
+            height: $size;
+            width: $size;
+        }
+    }
+}
