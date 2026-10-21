@@ -2,7 +2,7 @@ import styles from "./styles/main.module.scss"
 
 function backgroundElements() {
   return (
-    <div id={styles.backContentContainer}>
+    <div id={styles.backContentContainer} className="gsap_backContentContainer">
           <div id={styles.topLeftLine}>
             <img src="/icons/general/star.png" alt="star icon"/>
             <span></span>

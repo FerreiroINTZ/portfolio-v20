@@ -35,7 +35,7 @@ function hero() {
           markers: true,
           start: "top top",
           snap: {
-            snapTo: [0, .1]
+            snapTo: [0, 0]
           }
         }
       })
@@ -44,12 +44,12 @@ function hero() {
         height: "100%",
       }, "0")
 
-      tmln.to(".gsap_frontContentContainer", {
+      tmln.to(".gsap_frontContentContainer, .gsap_backContentContainer", {
         scale: 1.25
       }, "0")
 
       tmln.to(".gsap_heroBackground", {
-        scale: 1.05
+        scale: 1.25
       }, "0")
     })
 
