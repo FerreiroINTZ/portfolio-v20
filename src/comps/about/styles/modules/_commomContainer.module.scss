@@ -1,0 +1,32 @@
+@use "variables" as *;
+
+.commomContainer{
+    // background: blue;
+
+    .commomContainerTitle{
+        display: grid;
+        height: fit-content;
+        line-height: 48px;
+        
+        p{
+            font-size: 36px;
+            text-decoration: underline;
+            color: $gold;
+        }
+
+        h3{
+            font-size: 46px;
+            text-transform: uppercase;
+            color: $light_gold;
+            // font-weight: 400;
+            font-family: $main_font;
+        }
+    }
+
+    .commomContainerContent{
+        // background: pink;
+        font-size: 28px;
+        color: $paper;
+        margin-top: 20px;
+    }
+}
