@@ -1,0 +1,77 @@
+@use "variables" as *;
+
+#mainContentContainer{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: auto 600px 1fr;
+    gap: 80px;
+    // background: red;
+
+    #sectionSideBarr{
+        background: $gold;
+        margin-top: 80px;
+        width: 2px;
+        height: 250px;
+        margin-right: 40px;
+    }
+
+    #imgSide{
+
+        img{
+            height: 700px;
+            width: auto;
+        }
+    }
+
+    #textSide{
+        margin-top: 40px;
+        // background: blue;
+        
+        #titleContainer{
+            line-height: 57px;
+            font-family: $main_font;
+
+            #sectionTitle{
+                color: $gold;
+            }
+            
+            #artistName{
+                font-size: 80px;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: $paper;
+            }
+
+            #subtitleContainer{
+                font-size: 30px;
+                text-transform: uppercase;
+                color: $paper;
+                font-weight: 500;
+                letter-spacing: 2px;
+            }
+        }
+
+        #textContainer{
+            margin-top: 80px;
+            font-family: $main_font;;
+            font-size: 30px;
+            color: $paper;
+            width: 85%;
+            // background: red;
+        }
+
+        #divider{
+            margin-top: 50px;
+            width: 25%;
+            height: 2px;
+            background: $gold;
+        }
+
+        #fraseDeEfeito{
+            margin-top: 40px;
+            font-size: 36px;
+            font-family: $main_font;
+            color: $paper;
+        }
+    }
+}

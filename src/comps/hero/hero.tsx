@@ -32,7 +32,7 @@ function hero() {
           end: `+=${window.screen.availHeight*2}`,
           pin: true,
           scrub: true,
-          markers: true,
+          // markers: true,
           start: "top top",
           snap: {
             snapTo: [0, 0]
@@ -51,6 +51,17 @@ function hero() {
       tmln.to(".gsap_heroBackground", {
         scale: 1.25
       }, "0")
+
+      gsap.to(".gsap_hero", {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".gsap_hero",
+          markers: true,
+          start: "top top",
+          end: `+=${window.screen.availHeight*2}`,
+          toggleActions: "play none none reverse"
+        }
+      })
     })
 
     gsap_ref.current = gsap
