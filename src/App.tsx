@@ -3,16 +3,18 @@ import SmoothScroll from "@funcs/lenis/lenis"
 import Loading from "@comps/loading/loading"
 import Hero from "@comps/hero/hero"
 import About from "@comps/about/about"
+import Contact from "@comps/contact/contact"
 
 function App() {
   return (
     <>
       <SmoothScroll />
       {/* <Loading /> */}
-      <div>
+      {/* <div> */}
         {/* <Hero /> */}
-        <About />
-      </div>
+        {/* <About /> */}
+      {/* </div> */}
+      <Contact />
       {/* <div>App</div> */}
     </>
   )
