@@ -1,6 +1,7 @@
 @use "variables" as *;
 
 #textContainer{
+    margin-left: 50px;
     // background: pink;
 
     #sectionTitle{
@@ -48,7 +49,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            $size: 70px;
+            $size: 60px;
             width: $size;
             height: $size;
             background: $carvao;
