@@ -1,5 +1,7 @@
 @use "variables" as *;
 @use "./modules/footer.module" as *;
+@use "./modules/content.module" as *;
+@use "./modules/forms.module" as *;
 
 #contactContainer{
     position: relative;
@@ -85,7 +87,7 @@
         }
         #textContainer{
             grid-area: text;
-            background: purple;
+            // background: purple;
         }
     }
 }
