@@ -37,4 +37,55 @@
             transform: translate(35%, -40%);
         }
     }
+
+    #middleContent{
+        display: grid;
+        grid-template-areas: 
+        "sectionLabel sectionLabel"
+        "text forms";
+        grid-template-rows: auto 1fr;
+        justify-content: center;
+        gap: 40px;
+        width: 100%;
+        height: 100%;
+        
+        #sectionLabel{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            grid-area: sectionLabel;
+            margin-top: 40px;
+
+            img{
+                $size: 14px;
+                width: $size;
+                height: $size;
+            }
+
+            p{
+                color: $gold;
+                text-transform: uppercase;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            div{
+                width: 100px;
+                height: 2px;
+                background: linear-gradient(
+                    90deg,
+                    $gold, 
+                    #00000000
+                );
+            }
+        }
+        #formsContainer{
+            grid-area: forms;
+            background: red;
+        }
+        #textContainer{
+            grid-area: text;
+            background: purple;
+        }
+    }
 }
