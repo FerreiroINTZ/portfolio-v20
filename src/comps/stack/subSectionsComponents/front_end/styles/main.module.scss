@@ -1,0 +1,21 @@
+@use "./modules/front_end.module.scss" as *;
+
+#front_end_container{
+    position: relative;
+    background: blue;
+    z-index: 1;
+
+    canvas{
+        position: sticky;
+        top: 0px;
+    }
+}
+
+#front_end_content_container{
+    position: relative;
+    height: 200vh;
+    width: 100%;
+    background: red;
+    margin-top: -100vh;
+    z-index: 2;
+}
