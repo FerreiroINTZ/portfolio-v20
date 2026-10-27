@@ -9,9 +9,11 @@ import { useLayoutEffect, useRef } from "react";
 
 function hero_and_about() {
   const tmln_hero_ref = useRef<null | gsap.core.Timeline>(null);
+  const tmln_about_ref = useRef<null | gsap.core.Timeline>(null)
 
   useLayoutEffect(() => {
     let tmln_hero: null | gsap.core.Timeline = null;
+    let tmln_about: null | gsap.core.Timeline = null
     const cntx = Gsap.context(() => {
 
       const section_height = (document.getElementsByClassName("about_section_gsap")[0] as HTMLElement).offsetHeight
@@ -29,7 +31,7 @@ function hero_and_about() {
         },
       });
 
-      Gsap.timeline({
+      tmln_about = Gsap.timeline({
         scrollTrigger: {
           trigger: ".about_section_gsap",
           pin: true,
@@ -74,17 +76,19 @@ function hero_and_about() {
     });
     // console.log("time:", tmln)
     tmln_hero_ref.current = tmln_hero;
+    tmln_about_ref.current = tmln_about
     // console.log("TIme line:", tmln_ref.current)
     return () => {
       cntx.revert();
       tmln_hero_ref.current = null;
+      tmln_about_ref.current = null;
     };
   });
 
   return (
     <div id={style.hero_about_container}>
       <Hero tmln_ref={tmln_hero_ref} />
-      <About />
+      <About gsap_ref={tmln_about_ref}/>
     </div>
   );
 }
