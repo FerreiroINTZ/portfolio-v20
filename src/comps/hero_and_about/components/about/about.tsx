@@ -6,7 +6,7 @@ import ThirdPart from "./mainContent/thirdPart"
 
 function about() {
   return (
-    <section id={styles.aboutContainer}>
+    <section id={styles.aboutContainer} className="about_section_gsap">
       <div id={styles.aboutBackground}>
         <img src="/public/icons/about/bg.jpeg" alt="background da secao sobre"/>
       </div>

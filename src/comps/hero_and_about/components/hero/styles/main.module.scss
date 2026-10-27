@@ -5,12 +5,17 @@
 @use "variables" as *;
 
 #heroSection{
-    position: relative;
+    position: absolute;
     width: 100%;
+    z-index: 2;
+
+    *{
+        z-index: 3;
+    }
 
     #heroBackground{
         position: absolute;
-        z-index: -2;
+        z-index: 1;
         top: 0px;
         left: 0px;
         width: 100%;

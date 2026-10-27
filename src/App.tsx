@@ -1,20 +1,16 @@
 import {useEffect} from "react"
 import SmoothScroll from "@funcs/lenis/lenis"
 import Loading from "@comps/loading/loading"
-import Hero from "@comps/hero/hero"
-import About from "@comps/about/about"
 import Contact from "@comps/contact/contact"
+import Hero_and_About_Sections from "@comps/hero_and_about/hero_and_about"
 
 function App() {
   return (
     <>
       <SmoothScroll />
       {/* <Loading /> */}
-      {/* <div> */}
-        {/* <Hero /> */}
-        {/* <About /> */}
-      {/* </div> */}
-      <Contact />
+      <Hero_and_About_Sections />
+      {/* <Contact /> */}
       {/* <div>App</div> */}
     </>
   )

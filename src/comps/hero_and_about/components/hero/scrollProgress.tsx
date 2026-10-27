@@ -3,7 +3,7 @@ import {useEffect} from "react"
 import {type Gsap} from "@funcs/gsap/gsap"
 import {gsap} from "gsap"
 
-function scrollProgress({gsap}: {gsap: Gsap}) {
+function scrollProgress({gsap}: {gsap: gsap.core.Timeline}) {
   
     useEffect(() =>{
         let gsap_cntx: gsap.Context;
