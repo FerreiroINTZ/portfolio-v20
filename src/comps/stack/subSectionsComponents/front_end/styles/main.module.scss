@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @use "./modules/front_end.module.scss" as *;
 @use "./modules/content.module.scss" as *;
 
@@ -46,5 +48,40 @@
         background: #ff000022;
         width: 100%;
         height: 100vh;
+    }
+
+    #scrollLabel{
+        position: absolute;
+        bottom: 25px;
+        left: 50px;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        #scrollLabel_pt1{
+            display: flex;
+            align-items: center;
+            color: $gold;
+            gap: 6px;
+
+            img{
+                $size: 12px;
+                width: $size;
+                height: $size;
+            }
+
+            span{
+                width: 80px;
+                height: 1px;
+                background: $light_gold;
+            }
+        }
+
+        #scrollLabel_pt2{
+            color: $gold;
+            font-weight: 300;
+        }
     }
 }

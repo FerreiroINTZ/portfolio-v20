@@ -42,6 +42,14 @@ function content() {
           ref={section}>
           <div id={styles.fornt_end_bg}><img src="public/content/stack/front_end_frame.png" alt="bg"/></div>
           <Content />
+          <div id={styles.scrollLabel}>
+            <div id={styles.scrollLabel_pt1}>
+              <p>SCROLL</p>
+              <span></span>
+              <img src="/public/icons/general/star.png" alt="estrela"/>
+            </div>
+            <p  id={styles.scrollLabel_pt2}>para explorar</p>
+          </div>
         </div>
     </div>
   )
