@@ -140,4 +140,13 @@
             background: $gold;
         }
     }
+
+    #stackSection{
+        position: absolute;
+        bottom: 100px;
+        right: 100px;
+        display: flex;
+        gap: 30px;
+        background: red;
+    }
 }
