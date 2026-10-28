@@ -1,0 +1,143 @@
+@use "variables" as *;
+
+#contentSlw_tenho_que_mudar_o_nome_depois{
+    // background: red;
+    position: relative;
+    height: 100%;
+
+    #sectionPlaceHolder{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 20px;
+        left: 40px;
+
+        img{
+            $size: 20px;
+            width: $size;
+            height: $size;
+        }
+
+        p{
+            margin-left: 4px;
+            color: $gold;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        span{
+            margin-left: 10px;
+            width: 150px;
+            height: 2px;
+            background: linear-gradient(
+                90deg,
+                $gold,
+                #00000000
+            );
+        }
+    }
+
+    #sectionCountContainer{
+        position: absolute;
+        top: 100px;
+        left: 20px;
+        
+        $star_icon_size: 10px;
+        $espessura: 1px;
+        
+        .sectionCountExtremes{
+            display: block;
+            height: 10px;
+            width: $espessura;
+            margin-left: calc($star_icon_size / 2 - 1px);
+            background: $light_gold;
+            opacity: .6;
+        }
+
+        #sectionCountWrapper{
+            
+            .excluido{
+                opacity: .5;
+                span{   
+                    background: $gold;
+                }
+            }
+
+            .sectionCountItem{
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                // background: red;
+
+                .sectionCountNumber{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                }
+                
+                p{
+                    color: $light_gold;
+                    font-size: 14px;
+                }
+                
+                img{
+                    width: $star_icon_size;
+                    height: $star_icon_size;
+                    // background: red;
+                }
+
+                span{
+                    display: block;
+                    height: 36px;
+                    width: $espessura;
+                    background: $light_gold;
+                    margin-left: calc($star_icon_size / 2 - 1px);
+                }
+            }
+        }
+    }
+
+    #titleContainer{
+        padding-top: 115px;
+        padding-left: 150px;
+        // background: red;
+
+        h3{
+            font-size: 20px;
+            text-transform: uppercase;
+            color: $gold;
+            font-weight: 400;
+            letter-spacing: 1px;
+            font-family: $sec_font;
+        }
+
+        #subTitle{
+            margin-top: 10px;
+            font-size: 50px;
+            font-weight: 300;
+            color: $paper;
+            text-transform: uppercase;
+            line-height: 50px;
+            // background: red;
+        }
+
+        #sectionDesk{
+            margin-top: 16px;
+            width: 350px;
+            font-size: 20px;
+            color: $marfim;
+            font-weight: 300;
+            font-family: $main_font;
+            // background: blue;
+        }
+
+        #titleLine{
+            display: block;
+            margin-top: 10px;
+            width: 100px;
+            height: 1px;
+            background: $gold;
+        }
+    }
+}

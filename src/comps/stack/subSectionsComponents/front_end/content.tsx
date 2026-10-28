@@ -4,6 +4,8 @@ import {gsap} from "gsap"
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import {useEffect, useRef} from "react"
 
+import Content from "./contentComponent"
+
 function content() {
   
   const section = useRef<null | HTMLDivElement>(null)
@@ -39,7 +41,7 @@ function content() {
           className="stack_front_end_gsap"
           ref={section}>
           <div id={styles.fornt_end_bg}><img src="public/content/stack/front_end_frame.png" alt="bg"/></div>
-          <h1>Stack</h1>
+          <Content />
         </div>
     </div>
   )
