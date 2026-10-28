@@ -18,10 +18,11 @@ function content() {
         end: `+=${window.innerHeight * 3}`,
         onEnter: () => {
           console.log("Entrou!")
-          section.current!.style.display = "block"
+          section.current!.style.opacity = "1"
         },
-        onLeaveBack: () => section.current!.style.display = "none"
+        onLeaveBack: () => section.current!.style.opacity = "0"
       })
+      console.log("Acionado!")
     })
 
     return () => {
