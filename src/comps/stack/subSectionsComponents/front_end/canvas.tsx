@@ -13,7 +13,7 @@ function canvas() {
     function loadImage(){
         const img_array = images.current
         for(let frame in [...Array(framesQtd).keys()]){
-            console.log(Number(frame) + 1)
+            // console.log(Number(frame) + 1)
             const img = new Image()
             img.src = `/public/content/stack/front_end-frames/frame_${Number(frame) + 1}.png`
             img_array.push(img)
@@ -23,14 +23,14 @@ function canvas() {
     function getCurrFrame(){
         const bound = canvasContainer.current?.getBoundingClientRect()
         const prop = canvasContainer.current?.offsetHeight! / framesQtd
-        console.log(bound)
+        // console.log(bound)
         const frame = Math.round(Math.abs((bound!.y - window.innerHeight)/prop))
         return frame
     }
 
     function renderFrame(){
         const currFrame = getCurrFrame()
-        console.log(currFrame)
+        // console.log(currFrame)
         cntx.current!.drawImage(images.current[currFrame], 0, 0, canvas.current!.width, canvas.current!.height)
     }
 
@@ -44,9 +44,9 @@ function canvas() {
             loadImage()
 
             images.current[0].onload = () => {
-                console.log("Carregou!")
+                // console.log("Carregou!")
                 cntx.current!.drawImage(images.current[0], 0, 0, canvas_tag.width, canvas_tag.height)
-                console.log("Renderizada!")
+                // console.log("Renderizada!")
             }
             
             lenis?.on("scroll", () =>{

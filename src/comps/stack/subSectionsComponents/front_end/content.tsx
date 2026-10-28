@@ -1,9 +1,45 @@
 import styles from "./styles/main.module.scss"
 
+import {gsap} from "gsap"
+import {ScrollTrigger} from "gsap/ScrollTrigger"
+import {useEffect, useRef} from "react"
+
 function content() {
+  
+  const section = useRef<null | HTMLDivElement>(null)
+
+  useEffect(() =>{
+    const cntx = gsap.context(() =>{
+      ScrollTrigger.create({
+        trigger: ".stack_front_end_gsap",
+        pin: true,
+        markers: true,
+        start: "top top",
+        end: `+=${window.innerHeight * 3}`,
+        onEnter: () => {
+          console.log("Entrou!")
+          section.current!.style.display = "block"
+        },
+        onLeaveBack: () => section.current!.style.display = "none"
+      })
+    })
+
+    return () => {
+      cntx.revert; 
+      cntx.clear();
+    }
+
+  }, [section])
+  
   return (
     <div id={styles.front_end_content_container}>
-        nada
+        <div 
+          id={styles.front_end_content_wrapper} 
+          className="stack_front_end_gsap"
+          ref={section}>
+          <div id={styles.fornt_end_bg}><img src="public/content/stack/front_end_frame.png" alt="bg"/></div>
+          <h1>Stack</h1>
+        </div>
     </div>
   )
 }
