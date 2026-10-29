@@ -24,7 +24,8 @@ function canvas() {
         const bound = canvasContainer.current?.getBoundingClientRect()
         const prop = canvasContainer.current?.offsetHeight! / framesQtd
         // console.log(bound)
-        const frame = Math.round(Math.abs((bound!.y - window.innerHeight)/prop))
+        const calc_frame = Math.round(Math.abs((bound!.y - window.innerHeight)/prop))
+        const frame = Math.min(79, Math.max(0, calc_frame))
         return frame
     }
 

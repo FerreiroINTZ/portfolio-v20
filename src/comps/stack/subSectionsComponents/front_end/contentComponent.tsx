@@ -5,7 +5,10 @@ import TechCard from "./components/techCard"
 import {useState, useEffect} from 'react'
 import {gsap} from "gsap"
 
-function contentComponent() {
+function contentComponent(
+    {tmln}: 
+    {tmln: React.RefObject<gsap.core.Timeline | null>}
+) {
 
     const [itemSelected, setItemSelected] = useState<number>(0)
 
@@ -20,7 +23,7 @@ function contentComponent() {
         })
 
         return () => cntx.revert()
-    }, [itemSelected])
+    }, [itemSelected, tmln])
 
   return (
     <div id={styles.contentSlw_tenho_que_mudar_o_nome_depois}>
