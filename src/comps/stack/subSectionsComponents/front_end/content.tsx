@@ -13,27 +13,36 @@ function content() {
   const bgContainer = useRef<null | HTMLDivElement>(null)
   
   // colocar o gsap.timelime diretamente aqui, depois
-  const tmln = useRef<null | gsap.core.Timeline>(null)
-
-  useEffect(() =>{
-    const cntx = gsap.context(() =>{
-      tmln.current = gsap.timeline({
+  const tmln = useRef<null | gsap.core.Timeline>(gsap.timeline({
         // opacity: 1,
         scrollTrigger: {
           trigger: ".slw_gsap",
-          start: `+=${window.innerHeight * 2}`,
+          start: `+=${window.innerHeight * 5}`,
           end: "bottom top",
-          markers: true,
+          // markers: true,
           toggleActions: "play none none reverse"
         }
-      })
+      }))
+
+  useEffect(() =>{
+    const cntx = gsap.context(() =>{
+      // tmln.current = gsap.timeline({
+      //   // opacity: 1,
+      //   scrollTrigger: {
+      //     trigger: ".slw_gsap",
+      //     start: `+=${window.innerHeight * 2}`,
+      //     end: "bottom top",
+      //     markers: true,
+      //     toggleActions: "play none none reverse"
+      //   }
+      // })
 
       ScrollTrigger.create({
         trigger: ".slw_gsap",
         start: `+=${window.innerHeight * 2}`,
-        // markers: true,
+        markers: true,
         onEnter: () => bgContainer.current!.style.opacity = "1",
-        onEnterBack: () => bgContainer.current!.style.opacity = "0"
+        onLeaveBack: () => bgContainer.current!.style.opacity = "0"
       })
       console.log("Acionado!")
     })
@@ -43,8 +52,7 @@ function content() {
       cntx.clear();
       tmln.current = null
     }
-
-  }, [section])
+  })
   
   return (
     <div id={styles.front_end_content_container} className="slw_gsap">
