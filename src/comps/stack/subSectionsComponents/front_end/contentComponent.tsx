@@ -84,7 +84,7 @@ function contentComponent(
         </div>
         
         <div id={styles.stackSection}>
-            <div id={styles.stackCarrousel}>
+            <div id={styles.stackCarrousel} data-lenis-prevent>
                 {stackList.map((item, indx) =>
                 <div className={styles.techCard}>
                     <input type="radio" id={`${item.name}-radio`} name="front_end-stack"/>
