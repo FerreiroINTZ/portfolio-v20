@@ -9,6 +9,7 @@ import Content from "./contentComponent"
 function content() {
   
   const section = useRef<null | HTMLDivElement>(null)
+  const sectioWrapper = useRef<null | HTMLDivElement>(null)
 
   const bgContainer = useRef<null | HTMLDivElement>(null)
   
@@ -16,9 +17,9 @@ function content() {
   const tmln = useRef<null | gsap.core.Timeline>(gsap.timeline({
         // opacity: 1,
         scrollTrigger: {
-          trigger: ".slw_gsap",
+          trigger: sectioWrapper.current,
           start: `+=${window.innerHeight * 5}`,
-          end: "bottom top",
+          end: `+=${section.current?.offsetHeight}`,
           // markers: true,
           toggleActions: "play none none reverse"
         }
@@ -37,14 +38,19 @@ function content() {
       //   }
       // })
 
+      const start = window.innerHeight * 2
       ScrollTrigger.create({
-        trigger: ".slw_gsap",
-        start: `+=${window.innerHeight * 2}`,
+        trigger: sectioWrapper.current,
+        start: `+=${start}`,
+        end: `+=${sectioWrapper.current!.offsetHeight - (window.innerHeight + start)}`,
         markers: true,
         onEnter: () => bgContainer.current!.style.opacity = "1",
-        onLeaveBack: () => bgContainer.current!.style.opacity = "0"
+        onEnterBack: () => bgContainer.current!.style.opacity = "1",
+        onLeaveBack: () => bgContainer.current!.style.opacity = "0",
+        onLeave: () => bgContainer.current!.style.opacity = "0",
       })
       console.log("Acionado!")
+      console.log(sectioWrapper.current?.offsetHeight)
     })
 
     return () => {
@@ -55,7 +61,7 @@ function content() {
   })
   
   return (
-    <div id={styles.front_end_content_container} className="slw_gsap">
+    <div id={styles.front_end_content_container} ref={sectioWrapper}>
         <div 
           id={styles.front_end_content_wrapper}
           className="stack_front_end_gsap"
