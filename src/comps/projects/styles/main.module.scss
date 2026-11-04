@@ -1,0 +1,6 @@
+@use "variables" as *;
+@use "./modules/_projectComponent.module.scss" as *;
+
+#projectsSectionContainer{
+    background: red;
+}

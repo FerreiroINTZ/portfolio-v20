@@ -1,0 +1,115 @@
+@use "variables" as *;
+
+.projectComponent{
+    position: relative;
+    background: blue;
+    height: 200vh;
+
+    *{
+        position: relative;
+        z-index: 2;
+    }
+
+    .projectBg{
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: pink;
+        z-index: 1;
+
+        img{
+            position: sticky;
+            top: 0px;
+            width: 100%;
+            height: 100vh;
+            // filter: grayscale(.3);
+        }
+    }
+
+    .contentContainer{
+        display: flex;
+        flex-direction: column;
+        padding: 100px 200px 50px 200px;
+        // background: red;
+        
+        .part_1, .part_2{
+            min-height: 100vh;
+        }
+        
+        .part_1{
+            display: flex;
+            justify-content: space-between;
+            gap: 60px;
+
+            .imagesContainer{
+                display: grid;
+                gap: 40px;
+                height: fit-content;
+                background: blue;
+
+                .mainImage{
+                    position: relative;
+                    background: green;
+
+                    .modura{
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        z-index: 3;
+                    }
+                    
+                    .currImage{
+                        z-index: 2;
+                    }
+                }
+
+                .carouselContainer{
+                    background: pink;
+                }
+            }
+
+            .infosContainer{
+
+                .titleContainer{
+                    background: red;
+                    
+                    .countProject{
+                        font-size: 24px;
+                    font-weight: 500;
+                    color: white;
+                }
+
+                h4{
+                    font-size: 50px;
+                    color: white;
+                }
+
+                .titleLabelContaoner{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    
+                    span{
+                        width: 25px;
+                        height: 2px;
+                        background: $light_gold;
+                    }
+                    
+                    p{
+                        font-weight: 800;
+                        font-size: 24px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+                .mainDescription{
+                    margin-top: 16px;
+                    font-size: 20px;
+                    color: white;
+                }
+            }
+
+        }
+    }
+}
