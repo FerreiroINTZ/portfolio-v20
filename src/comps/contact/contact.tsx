@@ -25,7 +25,7 @@ function contact() {
             <p>contato</p>
             <div></div>
           </div>
-          <Content />
+          <Content /> {/* tem algo de errado aqui */}
           <Forms />
         </div>
         
