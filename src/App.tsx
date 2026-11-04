@@ -11,8 +11,8 @@ function App() {
       <SmoothScroll />
       {/* <Loading /> */}
       {/* <Hero_and_About_Sections /> */}
-      {/* <Stack /> */}
-      <Contact />
+      <Stack />
+      {/* <Contact /> */}
       {/* <div>App</div> */}
     </>
   )

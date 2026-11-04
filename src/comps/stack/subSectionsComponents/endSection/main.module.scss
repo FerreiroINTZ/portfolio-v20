@@ -1,0 +1,12 @@
+#canvas_endSection_container{
+    position: relative;
+    background: red;
+    margin-top: -100vh;
+    min-height: 800vh;
+    z-index: -2;
+
+    canvas{
+        position: sticky;
+        top: 0px;
+    }
+}
