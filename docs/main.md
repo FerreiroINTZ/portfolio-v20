@@ -10,6 +10,12 @@
 - dourado claro: #E8C783
 - marmoree: #8A91A1
 
+- extra_1: #B4977D
+- extra_2: #987C5D
+- extra_3: #A68759
+- extra_4: #81735E
+- extra_5: #252220
+
 ### Fontes
 - Principal: Cormorant Garamond
 - Secundaria: Frank Ruhl Libre
