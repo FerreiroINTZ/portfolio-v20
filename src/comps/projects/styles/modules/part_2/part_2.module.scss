@@ -1,0 +1,118 @@
+@use "variables" as *;
+
+.part_2 {
+  // margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+//   background: red;
+  height: fit-content;
+  min-height: 0px;
+
+  .infoSideContainer {
+    h4 {
+      font-size: 40px;
+      color: #b4977d;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-top: 20px;
+      width: 80%;
+      color: $paper;
+      font-size: 25px;
+      // background: blue;
+    }
+
+    .descSeparator {
+      display: block;
+      height: 2px;
+      background: $gold;
+      width: 100px;
+      margin: 50px 0px;
+    }
+
+    .projectActionsContainer {
+      display: flex;
+      gap: 20px;
+
+      button {
+        border: 1px solid $gold;
+        font-size: 16px;
+        padding: 10px 30px;
+        border-radius: 2px;
+        background: #252220;
+        color: $gold;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: $sec_font;
+      }
+    }
+
+    .infosContainer {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+    //   background: green;
+
+      .infoWrapper {
+        display: grid;
+        height: fit-content;
+        width: fit-content;
+        gap: 0px;
+        // background: pink;
+
+        *{
+            margin: 0px;
+        }
+
+        .label {
+          font-size: 22px;
+          text-transform: uppercase;
+          color: $gold;
+          width: fit-content;
+        //   background: blue;
+        }
+
+        .value {
+          width: fit-content;
+          font-size: 20px;
+          color: $paper;
+          font-weight: 600;
+          font-family: $main_font;
+          //   background: red;
+        }
+      }
+    }
+  }
+
+  .imageSideContainer{
+    // background: pink;
+
+    .molduraContainer{
+        // margin-top: 25px;
+        position: relative;
+        width: 450px;
+        // height: 500px;
+        aspect-ratio: 4/5;
+        // background: blue;
+        align-self: center;
+        justify-self: center;
+        
+        .moldurax{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            // background: green;
+        }
+
+        .descImage{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+  }
+}

@@ -7,6 +7,7 @@
 @use "./modules/stackContainer.module.scss" as *;
 
 .part_1 {
+  margin-top: 125px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;

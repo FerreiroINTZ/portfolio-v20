@@ -1,6 +1,7 @@
 @use "variables" as *;
 
 @use "./part_1/part_1.module.scss" as *;
+@use "./part_2/part_2.module.scss" as *;
 
 .projectComponent {
   position: relative;
