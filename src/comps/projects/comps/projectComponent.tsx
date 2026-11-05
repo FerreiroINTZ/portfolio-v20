@@ -1,7 +1,7 @@
 import styles from "../styles/main.module.scss"
 
-import Part1 from "./part1"
-import Part2 from "./part2"
+import Part1 from "./part_1/part1"
+// import Part2 from "./part2"
 
 function projectComponent() {
   return (
@@ -12,7 +12,7 @@ function projectComponent() {
 
         <div className={styles.contentContainer}>
             <Part1 />
-            <Part2 />
+            {/* <Part2 /> */}
         </div>
     </div>
   )

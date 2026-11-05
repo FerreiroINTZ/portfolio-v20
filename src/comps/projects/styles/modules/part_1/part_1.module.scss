@@ -1,0 +1,14 @@
+@use "variables" as *;
+
+@use "./modules/title.module.scss" as *;
+@use "./modules/carousel.module.scss" as *;
+@use "./modules/imageContainer.module.scss" as *;
+@use "./modules/mainDescription.module.scss" as *;
+@use "./modules/stackContainer.module.scss" as *;
+
+.part_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  gap: 40px;
+}

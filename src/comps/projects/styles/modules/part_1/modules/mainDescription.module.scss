@@ -1,0 +1,16 @@
+@use "variables" as *;
+
+.mainDescription {
+  margin-top: 16px;
+  font-size: 20px;
+  color: $paper;
+}
+
+.mainDescriptionSeparator {
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 75px;
+  height: 2px;
+  background: #987c5d;
+}
